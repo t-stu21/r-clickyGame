@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "pic": "apod.jpg"
+  },
+  {
+    "id": 2,
+    "pic": "bengal.jpg"
+  },
+  {
+    "id": 3,
+    "pic": "blur.jpg"
+  },
+  {
+    "id": 4,
+    "pic": "bobcat.jpg"
+  },
+  {
+    "id": 5,
+    "pic": "bunny.jpg"
+  },
+  {
+    "id": 6,
+    "pic": "cattle.jpg"
+  },
+  {
+    "id": 7,
+    "pic": "cel.jpg"
+  },
+  {
+    "id": 8,
+    "pic": "close.jpg"
+  },
+  {
+    "id": 9,
+    "pic": "croc.jpg"
+  },
+  {
+    "id": 10,
+    "pic": "elephant.jpg"
+  },
+  {
+    "id": 11,
+    "pic": "fish.jpg"
+  },
+  {
+    "id": 12,
+    "pic": "jag.jpg"
+  }
+]
