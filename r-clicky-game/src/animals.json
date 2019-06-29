@@ -1,50 +1,62 @@
 [
   {
     "id": 1,
-    "pic": "apod.jpg"
+    "image": "apod.jpg",
+    "name": "apod"
   },
   {
     "id": 2,
-    "pic": "bengal.jpg"
+    "image": "bengal.jpg",
+    "name": "bengal"
   },
   {
     "id": 3,
-    "pic": "blur.jpg"
+    "image": "blur.jpg",
+    "name": "blur"
   },
   {
     "id": 4,
-    "pic": "bobcat.jpg"
+    "image": "bobcat.jpg",
+    "name": "bobcat"
   },
   {
     "id": 5,
-    "pic": "bunny.jpg"
+    "image": "bunny.jpg",
+    "name": "bunny"
   },
   {
     "id": 6,
-    "pic": "cattle.jpg"
+    "image": "cattle.jpg",
+    "name": "cattle"
   },
   {
     "id": 7,
-    "pic": "cel.jpg"
+    "image": "cel.jpg",
+    "name": "cel"
   },
   {
     "id": 8,
-    "pic": "close.jpg"
+    "image": "close.jpg",
+    "name": "close"
   },
   {
     "id": 9,
-    "pic": "croc.jpg"
+    "image": "croc.jpg",
+    "name": "croc"
   },
   {
     "id": 10,
-    "pic": "elephant.jpg"
+    "image": "elephant.jpg",
+    "name": "elephant"
   },
   {
     "id": 11,
-    "pic": "fish.jpg"
+    "image": "fish.jpg",
+    "name": "fish"
   },
   {
     "id": 12,
-    "pic": "jag.jpg"
+    "image": "jag.jpg",
+    "name": "jag"
   }
 ]
