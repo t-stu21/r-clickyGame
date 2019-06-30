@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Card from "./components/Card";
 import animals from "./animals.json";
-import Nav from "./components/Nav";
+import Jumbo from "./components/Jumbo";
 
 class App extends Component {
   state = {
@@ -11,51 +11,50 @@ class App extends Component {
     score: 0
   };
 
-  imageClick = event => {
-    const currentAnimal = event.target.alt;
-    const AnimalAlreadyClicked =
-      this.state.animalsClicked.indexOf(currentAnimal) > -1;
-    console.log("clicked");
+  imageClick = id => {
+    let animalsClicked = this.state.animalsClicked;
 
-    if (AnimalAlreadyClicked) {
+    if (animalsClicked.includes(id)) {
       this.setState({
-        animals: this.state.animals.sort(function(a, b) {
-          return 0.5 - Math.random();
-        }),
         animalsClicked: [],
-        score: 0
+        score: 0,
+        status: "Game Over!"
       });
-      alert("You lose");
+      console.log(animalsClicked);
+      return;
     } else {
-      this.setState(
-        {
-          animals: this.state.animals.sort(function(a, b) {
-            return 0.5 - Math.random();
-          }),
-          animalsClicked: this.state.animalsClicked.concat(currentAnimal),
-          score: this.state.score + 1
-        },
+      animalsClicked.push(id);
+      this.setState({
+        score: animalsClicked.length
+      });
 
-        () => {
-          if (this.state.score === 12) {
-            alert("Yay! You Win!");
-            this.setState({
-              animals: this.state.animals.sort(function(a, b) {
-                return 0.5 - Math.random();
-              }),
-              animalsClicked: [],
-              score: 0
-            });
-          }
-        }
-      );
+      if (animalsClicked.length === 12) {
+        this.setState({
+          score: 12,
+          status: "You Won!",
+          animalsClicked: []
+        });
+        console.log("You Win");
+        return;
+      }
+
+      this.setState({
+        animals,
+        animalsClicked,
+        score: animalsClicked.length
+      });
+
+      for (let i = animals.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [animals[i], animals[j]] = [animals[j], animals[i]];
+      }
     }
   };
 
   render() {
     return (
       <div>
-        <Nav score={"Score:" + this.state.score} />
+        <Jumbo score={"Score:" + this.state.score} />
         <div className="row">
           <div className="wrapper">
             {this.state.animals.map(animals => (
@@ -64,6 +63,7 @@ class App extends Component {
                 key={animals.id}
                 image={animals.image}
                 name={animals.name}
+                imageClick={this.imageClick}
               />
             ))}
           </div>
